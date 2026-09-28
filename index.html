@@ -105,7 +105,20 @@
     .hero-inner {
       max-width: var(--max);
       margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 40px;
     }
+    .hero-photo {
+      flex-shrink: 0;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.35);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+    .hero-text { flex: 1; min-width: 0; }
     .hero h1 {
       color: #fff;
       font-size: 42px;
@@ -319,6 +332,10 @@
     @media (max-width: 680px) {
       .hero h1 { font-size: 32px; }
       .hero { padding: 44px 20px; }
+      .hero-inner { flex-direction: column; text-align: center; gap: 24px; }
+      .hero-photo { width: 150px; height: 150px; }
+      .hero-meta span { white-space: normal; }
+      .hero-contact { justify-content: center; }
       section { padding: 40px 20px; }
       .two-col { grid-template-columns: 1fr; gap: 28px; }
       .nav-brand { font-size: 16px; }
@@ -347,6 +364,8 @@
   <!-- Hero -->
   <header class="hero">
     <div class="hero-inner">
+      <img class="hero-photo" src="My image.png" alt="Photo of Vaibhav Paliwal" />
+      <div class="hero-text">
       <h1>Vaibhav Paliwal</h1>
       <p class="title">Software Test Engineer (ETL &amp; QA)</p>
       <p class="hero-meta">
@@ -361,7 +380,8 @@
         <a href="tel:+917877716299">+91 7877716299</a>
         <a href="https://github.com/Vaibhav7877" target="_blank" rel="noopener">GitHub</a>
         <a href="https://linkedin.com/in/vaibhav-paliwal" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn-primary" href="Vaibhav-Paliwal-Resume.pdf" download>Download Resume</a>
+        <a class="btn-primary" href="Vaibhav Resume (1).pdf" download>Download Resume</a>
+      </div>
       </div>
     </div>
   </header>
